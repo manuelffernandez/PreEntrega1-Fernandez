@@ -1,7 +1,7 @@
 import NavItem from '../NavItem/NavItem';
-import './Header.css';
+import './NavBar.css';
 
-const Header = () => {
+const NavBar = () => {
    return (
       <header className='bg-dark header'>
          <nav className='navbar navbar-expand-sm py-3'>
@@ -48,4 +48,4 @@ const Header = () => {
    );
 };
 
-export default Header;
+export default NavBar;
