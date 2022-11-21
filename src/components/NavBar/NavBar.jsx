@@ -9,8 +9,8 @@ const NavBar = () => {
          <nav className='navbar navbar-expand-sm py-3'>
             <div className='container-fluid order-1'>
                <div className='order-1 col-3 col-sm-2 m-0 '>
-                  <a className='navbar-brand text-light' href='#'>
-                     <span className='text-info'>Brand</span> Logo
+                  <a className='navbar-brand text-light overpass_600' href='#'>
+                     <span className='text-info'>Tienda</span> Manu
                   </a>
                </div>
                <div className='order-2 col-2 offset-5 order-sm-3 offset-sm-0 me-sm-1 d-flex justify-content-end'>
