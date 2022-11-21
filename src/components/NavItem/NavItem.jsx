@@ -1,0 +1,11 @@
+import './NavItem.css';
+
+const NavItem = props => {
+   return (
+      <button className='bg-transparent border-0 text-light navItem overpass_400'>
+         Categoría {props.categoryNumber}
+      </button>
+   );
+};
+
+export default NavItem;
