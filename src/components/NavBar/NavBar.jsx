@@ -31,15 +31,9 @@ const NavBar = () => {
                   className='collapse navbar-collapse order-4 order-sm-2'
                   id='navbarSupportedContent'>
                   <ul className='navbar-nav w-100 justify-content-evenly'>
-                     <li className='nav-item'>
-                        <NavItem categoryNumber='1' />
-                     </li>
-                     <li className='nav-item'>
-                        <NavItem categoryNumber='2' />
-                     </li>
-                     <li className='nav-item'>
-                        <NavItem categoryNumber='3' />
-                     </li>
+                     <NavItem categoryNumber='1' id='1' />
+                     <NavItem categoryNumber='2' id='2' />
+                     <NavItem categoryNumber='3' id='3' />
                   </ul>
                </div>
             </div>
