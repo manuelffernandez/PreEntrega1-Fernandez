@@ -11,7 +11,7 @@ const DescriptionContainer = () => {
 
   useEffect(() => {
     customFetch(
-      2000,
+      1000,
       products.find(product => product.id === itemID)
     )
       .then(prod => {

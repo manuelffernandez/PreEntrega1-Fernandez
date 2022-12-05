@@ -17,7 +17,7 @@ const ItemListContainer = () => {
     } else {
       productsToShow = products;
     }
-    customFetch(2000, productsToShow)
+    customFetch(1000, productsToShow)
       .then(prods => setData(prods))
       .catch(err => console.log(err));
   }, [categoryName]);
