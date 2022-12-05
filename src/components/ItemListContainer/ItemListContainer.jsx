@@ -20,7 +20,7 @@ const ItemListContainer = () => {
     customFetch(2000, productsToShow)
       .then(prods => setData(prods))
       .catch(err => console.log(err));
-  }, [data]);
+  }, [categoryName]);
 
   return (
     <div className='container-fluid mx-auto py-5'>
