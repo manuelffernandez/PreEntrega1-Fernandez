@@ -2,7 +2,7 @@ import { categories } from './categories';
 
 export const products = [
   {
-    id: 1,
+    id: '1',
     name: 'Sombrero de paja',
     stock: 30,
     price: 50,
@@ -13,7 +13,7 @@ export const products = [
     categoryName: categories[0].category,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Camisa rallada',
     stock: 20,
     price: 70,
@@ -24,7 +24,7 @@ export const products = [
     categoryName: categories[1].category,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Zapatos de cuero',
     stock: 10,
     price: 100,
@@ -35,7 +35,7 @@ export const products = [
     categoryName: categories[2].category,
   },
   {
-    id: 4,
+    id: '4',
     name: 'Cinturón de cuero',
     stock: 15,
     price: 40,
@@ -46,7 +46,7 @@ export const products = [
     categoryName: categories[0].category,
   },
   {
-    id: 5,
+    id: '5',
     name: 'Moño',
     stock: 5,
 
@@ -58,7 +58,7 @@ export const products = [
     categoryName: categories[0].category,
   },
   {
-    id: 6,
+    id: '6',
     name: 'Guantes de lana',
     stock: 20,
     price: 35,
@@ -69,7 +69,7 @@ export const products = [
     categoryName: categories[1].category,
   },
   {
-    id: 7,
+    id: '7',
     name: 'Billetera de cuero',
     stock: 10,
     price: 45,
@@ -80,7 +80,7 @@ export const products = [
     categoryName: categories[0].category,
   },
   {
-    id: 8,
+    id: '8',
     name: 'Lentes de sol',
     stock: 5,
 
@@ -92,7 +92,7 @@ export const products = [
     categoryName: categories[0].category,
   },
   {
-    id: 9,
+    id: '9',
     name: 'Reloj de muñeca',
     stock: 10,
     price: 70,
@@ -103,7 +103,7 @@ export const products = [
     categoryName: categories[0].category,
   },
   {
-    id: 10,
+    id: '10',
     name: 'Botas de cuero',
     stock: 7,
 
@@ -115,7 +115,7 @@ export const products = [
     categoryName: categories[2].category,
   },
   {
-    id: 11,
+    id: '11',
     name: 'Swater de lana',
     stock: 10,
     price: 80,
