@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap');
 
+:root {
+  --celadon-blue: #0081a7ff;
+  --maximum-blue-green: #00afb9ff;
+  --light-yellow: #fdfcdcff;
+  --peach-puff: #fed9b7ff;
+  --bittersweet: #f07167ff;
+}
+
 html {
     height: 100%;
 }
