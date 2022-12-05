@@ -1,5 +1,3 @@
-import './Description.css';
-
 const Description = props => {
   const { product } = props;
 
