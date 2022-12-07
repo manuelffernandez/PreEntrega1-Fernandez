@@ -1,4 +1,5 @@
 import './Item.css';
+import GenericButton from '../GenericButton/GenericButton';
 import { Link } from 'react-router-dom';
 
 const Item = ({ pictUrl, id, name, stock, price, categoryName }) => {
@@ -9,9 +10,7 @@ const Item = ({ pictUrl, id, name, stock, price, categoryName }) => {
           <div className='position-relative '>
             <div className='d-flex justify-content-center align-items-center position-absolute cardFilter'>
               <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
-                <p className='m-0 p-2 bgBlue colorYellow hoverBgBlueGreen'>
-                  Ver más
-                </p>
+                <GenericButton>Ver más</GenericButton>
               </Link>
             </div>
             <img src={pictUrl} className='card-img-top rounded-0 cardImg' />
