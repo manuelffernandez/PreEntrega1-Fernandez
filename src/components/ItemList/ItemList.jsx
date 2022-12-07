@@ -2,7 +2,7 @@ import Item from '../Item/Item';
 
 const ItemList = ({ products }) => {
   return (
-    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3'>
+    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 px-5'>
       {products.length > 0 ? (
         products.map(product => {
           return (
