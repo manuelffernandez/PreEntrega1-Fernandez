@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap');
+/* Overpas font */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;600&display=swap');
+/* Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;600&display=swap');
 
 :root {
-  --celadon-blue: #0081a7ff;
-  --maximum-blue-green: #00afb9ff;
+  --celadon-blue: #035a75;
+  --maximum-blue-green: #01949c;
   --light-yellow: #fdfcdcff;
-  --peach-puff: #fed9b7ff;
+  --peach-puff: #ecc6a2;
   --bittersweet: #f07167ff;
 }
 
@@ -12,12 +15,112 @@ html {
   height: 100%;
 }
 
+#root{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.overpass_200 {
+  font-weight: 200;
+  font-family: 'Overpass';
+}
+
 .overpass_400 {
   font-weight: 400;
   font-family: 'Overpass';
 }
 
+.roboto_300 {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.roboto_600 {
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+
 .overpass_600 {
   font-weight: 600;
   font-family: 'Overpass';
+}
+
+.bgBlue {
+  background-color: var(--celadon-blue);
+}
+
+.bgBlueGreen {
+  background-color: var(--maximum-blue-green);
+}
+
+.bgYellow {
+  background-color: var(--light-yellow);
+}
+
+.bgPuff {
+  background-color: var(--peach-puff);
+}
+
+.bgBittersweet {
+  background-color: var(--bittersweet);
+}
+
+.hoverBgBlue:hover {
+  background-color: var(--celadon-blue);
+}
+
+.hoverBgBlueGreen:hover {
+  background-color: var(--maximum-blue-green);
+}
+
+.hoverBgYellow:hover {
+  background-color: var(--light-yellow);
+}
+
+.hoverBgPuff:hover {
+  background-color: var(--peach-puff);
+}
+
+.hoverBgBittersweet:hover {
+  background-color: var(--bittersweet);
+}
+
+.colorBlue {
+  color: var(--celadon-blue);
+}
+
+.colorBlueGreen {
+  color: var(--maximum-blue-green);
+}
+
+.colorYellow {
+  color: var(--light-yellow);
+}
+
+.colorPuff {
+  color: var(--peach-puff);
+}
+
+.colorBittersweet {
+  color: var(--bittersweet);
+}
+
+.hoverBlue:hover {
+  color: var(--celadon-blue);
+}
+
+.hoverBlueGreen:hover {
+  color: var(--maximum-blue-green);
+}
+
+.hoverYellow:hover {
+  color: var(--light-yellow);
+}
+
+.hoverPuff:hover {
+  color: var(--peach-puff);
+}
+
+.hoverBittersweet:hover {
+  color: var(--bittersweet);
 }
