@@ -1,8 +1,12 @@
-# PreEntrega1+Fernandez
+# PreEntrega2+Fernandez
 
 Project made for coderhouse React course. Manuel Fernandez.
 
 I use `npx install vite@latest` as a template
+
+## GIF to see navigation
+
+<img src="./src/assets/videoMuestra.gif" />
 
 ## Scripts
 
