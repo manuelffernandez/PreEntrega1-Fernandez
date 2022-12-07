@@ -1,0 +1,9 @@
+.descTitle {
+  word-spacing: 1rem;
+}
+
+.descImg {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}

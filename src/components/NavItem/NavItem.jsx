@@ -1,11 +1,12 @@
-import './NavItem.css';
-
 const NavItem = props => {
-   return (
-      <button className='bg-transparent border-0 text-light navItem overpass_400'>
-         Categoría {props.categoryNumber}
+  const { categoryName } = props;
+  return (
+    <li className='nav-item'>
+      <button className='bg-transparent border-0 fs-5 overpass_400 colorYellow hoverBlueGreen'>
+        {categoryName}
       </button>
-   );
+    </li>
+  );
 };
 
 export default NavItem;
