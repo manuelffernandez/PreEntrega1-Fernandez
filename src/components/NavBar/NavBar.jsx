@@ -5,7 +5,7 @@ import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <header className='bg-dark header'>
+    <header className='bgBittersweet header'>
       <nav className='navbar navbar-expand-sm py-3'>
         <div className='container-fluid order-1'>
           <NavBrand />
