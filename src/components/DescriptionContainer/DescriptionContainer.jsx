@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './DescriptionContainer.css';
 import { products } from '../../utils/products';
 import Description from '../Description/Description';
 import { customFetch } from '../../utils/customFetch';
@@ -22,7 +21,11 @@ const DescriptionContainer = () => {
 
   return (
     <div className='container-fluid my-4 description'>
-      <Description product={product} />
+      {Object.keys(product).length !== 0 ? (
+        <Description product={product} />
+      ) : (
+        <p>Cargando...</p>
+      )}
     </div>
   );
 };
