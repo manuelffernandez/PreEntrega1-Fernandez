@@ -116,7 +116,7 @@ export const products = [
   },
   {
     id: '11',
-    name: 'Swater de lana',
+    name: 'Sweater de lana',
     stock: 10,
     price: 80,
     description:
