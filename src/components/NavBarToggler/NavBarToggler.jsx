@@ -22,7 +22,7 @@ const NavBarToggler = () => {
           {categories.map(cate => {
             return (
               <Link
-                to={`/category/${cate.category}`}
+                to={`/categoria/${cate.category}`}
                 style={{ textDecoration: 'none' }}
                 key={cate.id}>
                 <NavItem categoryName={cate.category} />
