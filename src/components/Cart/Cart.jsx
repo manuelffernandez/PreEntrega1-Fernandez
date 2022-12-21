@@ -1,34 +1,34 @@
 import { useContext } from 'react';
 import { CartContext } from '../CartContext/CartContext';
 import GenericButton from '../GenericButton/GenericButton';
+import OrderSummary from '../OrderSummary/OrderSummary';
+import CartList from '../CartList/CartList';
 
 const Cart = () => {
-  const { cartList, removeItem, clear } = useContext(CartContext);
+  const { cartList, removeItem, clear, calcSubtotal, calcTaxes, calcTotal } =
+    useContext(CartContext);
 
   return (
     <>
       <h1>Im Cart :D</h1>
-      <ul>
+      <div>
         {cartList.length === 0 ? (
           <p>Your cart is empty</p>
         ) : (
-          <div>
+          <>
             <GenericButton handleClick={() => clear()}>
               Borrar todo
             </GenericButton>
-            {cartList.map(item => (
-              <li key={item.id} className='my-2'>
-                <span className='me-2'>
-                  {item.amount}u. - {item.name} - ${item.price}
-                </span>
-                <GenericButton handleClick={() => removeItem(item.id)}>
-                  Borrar producto
-                </GenericButton>
-              </li>
-            ))}
-          </div>
+            <ul>
+              <CartList removeItem={removeItem} cart={cartList}></CartList>
+            </ul>
+            <OrderSummary
+              subtotal={calcSubtotal()}
+              taxes={calcTaxes()}
+              total={calcTotal()}></OrderSummary>
+          </>
         )}
-      </ul>
+      </div>
     </>
   );
 };
