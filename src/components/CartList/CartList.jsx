@@ -1,21 +1,48 @@
-import GenericButton from '../GenericButton/GenericButton';
 import { CartContext } from '../CartContext/CartContext';
 import { useContext } from 'react';
+import CartItem from '../CartItem/CartItem';
 
 const CartList = props => {
   const { cart, removeItem } = props;
   const { calcItemSubtotal } = useContext(CartContext);
 
-  return cart.map(item => (
-    <li key={item.id} className='my-2'>
-      <span className='me-2'>
-        {item.amount} {item.name} - ${calcItemSubtotal(item.id)}
-      </span>
-      <GenericButton handleClick={() => removeItem(item.id)}>
-        Borrar producto
-      </GenericButton>
-    </li>
-  ));
+  return (
+    <table className='table'>
+      <thead>
+        <tr>
+          <th scope='col' className='text-center'>
+            Producto
+          </th>
+          <th scope='col' className='text-center'>
+            Precio
+          </th>
+          <th scope='col' className='text-center'>
+            Cant.
+          </th>
+          <th scope='col' className='text-center'>
+            Tot.
+          </th>
+          <th scope='col' className='text-center'>
+            Borrar
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {cart.map(item => (
+          <CartItem
+            key={item.id}
+            name={item.name}
+            amount={item.amount}
+            price={item.price}
+            img={item.image}
+            subtotal={calcItemSubtotal(item.id)}
+            id={item.id}
+            handleDelete={removeItem}
+          />
+        ))}
+      </tbody>
+    </table>
+  );
 };
 
 export default CartList;
