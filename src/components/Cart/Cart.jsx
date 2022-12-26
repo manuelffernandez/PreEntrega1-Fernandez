@@ -4,40 +4,31 @@ import GenericButton from '../GenericButton/GenericButton';
 import OrderSummary from '../OrderSummary/OrderSummary';
 import CartList from '../CartList/CartList';
 import { Link } from 'react-router-dom';
-import './Cart.css';
 
 const Cart = () => {
-  const { cartList, removeItem, clear, calcSubtotal, calcTaxes, calcTotal } =
+  const { cartList, calcSubtotal, calcTaxes, calcTotal } =
     useContext(CartContext);
 
   return (
-    <div className='my-4'>
+    <div className='my-4 container'>
       <h1 className='text-center colorPuff overpass_600'>Carrito</h1>
-      <div className='container'>
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <GenericButton>Seguir comprando</GenericButton>
+      </Link>
+      <div>
         {cartList.length === 0 ? (
-          <p>
-            Tu carrito no tiene productos.
-            <Link to='/' style={{ textDecoration: 'none' }}>
-              Ir a comprar.
-            </Link>
+          <p className='mt-5 text-center overpass_600 colorBittersweet'>
+            Ups! No hay nada por aquí.
           </p>
         ) : (
-          <>
-            <div className='row'>
-              <div className='col-12 col-lg-8'>
-                <CartList removeItem={removeItem} cart={cartList}></CartList>
-                <GenericButton handleClick={() => clear()}>
-                  Borrar todo
-                </GenericButton>
-              </div>
-              <div className='col-12 col-lg-4 mt-4 mt-lg-0 p-4 border rounded orderSummary'>
-                <OrderSummary
-                  subtotal={calcSubtotal()}
-                  taxes={calcTaxes()}
-                  total={calcTotal()}></OrderSummary>
-              </div>
-            </div>
-          </>
+          <div className='row'>
+            <CartList />
+            <OrderSummary
+              subtotal={calcSubtotal()}
+              taxes={calcTaxes()}
+              total={calcTotal()}
+            />
+          </div>
         )}
       </div>
     </div>
