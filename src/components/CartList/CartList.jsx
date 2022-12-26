@@ -1,47 +1,16 @@
 import { CartContext } from '../CartContext/CartContext';
 import { useContext } from 'react';
-import CartItem from '../CartItem/CartItem';
+import CartTable from '../CartTable/CartTable';
+import GenericButton from '../GenericButton/GenericButton';
 
-const CartList = props => {
-  const { cart, removeItem } = props;
-  const { calcItemSubtotal } = useContext(CartContext);
+const CartList = () => {
+  const { clear } = useContext(CartContext);
 
   return (
-    <table className='table'>
-      <thead>
-        <tr>
-          <th scope='col' className='text-center'>
-            Producto
-          </th>
-          <th scope='col' className='text-center'>
-            Precio
-          </th>
-          <th scope='col' className='text-center'>
-            Cant.
-          </th>
-          <th scope='col' className='text-center'>
-            Tot.
-          </th>
-          <th scope='col' className='text-center'>
-            Borrar
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {cart.map(item => (
-          <CartItem
-            key={item.id}
-            name={item.name}
-            amount={item.amount}
-            price={item.price}
-            img={item.image}
-            subtotal={calcItemSubtotal(item.id)}
-            id={item.id}
-            handleDelete={removeItem}
-          />
-        ))}
-      </tbody>
-    </table>
+    <div className='col-12 col-lg-8'>
+      <CartTable />
+      <GenericButton handleClick={() => clear()}>Borrar todo</GenericButton>
+    </div>
   );
 };
 
