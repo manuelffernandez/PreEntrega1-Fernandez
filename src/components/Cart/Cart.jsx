@@ -2,11 +2,11 @@ import { useContext } from 'react';
 import { CartContext } from '../CartContext/CartContext';
 import GenericButton from '../GenericButton/GenericButton';
 import OrderSummary from '../OrderSummary/OrderSummary';
-import CartList from '../CartList/CartList';
+import CartTable from '../CartTable/CartTable';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartList, calcSubtotal, calcTaxes, calcTotal } =
+  const { cartList, clear, calcSubtotal, calcTaxes, calcTotal } =
     useContext(CartContext);
 
   return (
@@ -22,7 +22,12 @@ const Cart = () => {
           </p>
         ) : (
           <div className='row'>
-            <CartList />
+            <div className='col-12 col-lg-8'>
+              <CartTable />
+              <GenericButton handleClick={() => clear()}>
+                Borrar todo
+              </GenericButton>
+            </div>
             <OrderSummary
               subtotal={calcSubtotal()}
               taxes={calcTaxes()}
