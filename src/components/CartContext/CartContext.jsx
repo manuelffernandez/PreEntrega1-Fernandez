@@ -30,7 +30,6 @@ const CartContextProvider = props => {
   const removeItem = productId => {
     const result = cartList.filter(prod => prod.id !== productId);
     setCartList(result);
-    console.log(cartList);
   };
 
   const clear = () => {
