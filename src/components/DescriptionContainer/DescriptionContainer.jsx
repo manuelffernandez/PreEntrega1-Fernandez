@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
-import { products } from '../../utils/products';
 import Description from '../Description/Description';
-import { customFetch } from '../../utils/customFetch';
 import { useParams } from 'react-router-dom';
+import { getProduct } from '../../services/fetchData';
 
 const DescriptionContainer = () => {
   const [product, setProduct] = useState({});
   const { itemID } = useParams();
 
   useEffect(() => {
-    customFetch(
-      1000,
-      products.find(product => product.id === itemID)
-    )
-      .then(prod => {
-        setProduct(prod);
+    getProduct(itemID)
+      .then(productGeted => {
+        setProduct(productGeted);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.error('There was an error!', err);
+      });
   }, []);
 
   return (

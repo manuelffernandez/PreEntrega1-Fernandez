@@ -1,5 +1,4 @@
 import NavItem from '../NavItem/NavItem';
-import { categories } from '../../utils/categories';
 import { Link } from 'react-router-dom';
 
 const NavBarToggler = () => {
@@ -19,16 +18,17 @@ const NavBarToggler = () => {
         className='collapse navbar-collapse order-4 order-sm-2'
         id='navbarSupportedContent'>
         <ul className='navbar-nav w-100 justify-content-evenly'>
-          {categories.map(cate => {
-            return (
-              <Link
-                to={`/categoria/${cate.category}`}
-                style={{ textDecoration: 'none' }}
-                key={cate.id}>
-                <NavItem categoryName={cate.category} />
-              </Link>
-            );
-          })}
+          <Link
+            to={`/categoria/Indumentaria`}
+            style={{ textDecoration: 'none' }}>
+            <NavItem categoryName={'Indumentaria'} />
+          </Link>
+          <Link to={`/categoria/Accesorios`} style={{ textDecoration: 'none' }}>
+            <NavItem categoryName={'Accesorios'} />
+          </Link>
+          <Link to={`/categoria/Zapatos`} style={{ textDecoration: 'none' }}>
+            <NavItem categoryName={'Zapatos'} />
+          </Link>
         </ul>
       </div>
     </>

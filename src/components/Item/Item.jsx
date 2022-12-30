@@ -2,7 +2,7 @@ import './Item.css';
 import GenericButton from '../GenericButton/GenericButton';
 import { Link } from 'react-router-dom';
 
-const Item = ({ pictUrl, id, name, stock, price, categoryName }) => {
+const Item = ({ pictUrl, id, name, price, categoryName }) => {
   return (
     <div className='col'>
       <div className='card rounded-0 border-0 cardItem'>
