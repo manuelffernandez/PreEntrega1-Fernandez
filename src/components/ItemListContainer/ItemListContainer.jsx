@@ -1,25 +1,25 @@
 import { useEffect, useState } from 'react';
-import { products } from '../../utils/products';
 import ItemList from '../ItemList/ItemList';
-import { customFetch } from '../../utils/customFetch';
 import { useParams } from 'react-router-dom';
+import { getProducts } from '../../services/fetchData';
+import { showAlert, closeAlert } from '../../utils/swalAlert';
+import swalConfig from '../../utils/swalConfig';
 
 const ItemListContainer = () => {
   const [data, setData] = useState([]);
   const { categoryName } = useParams();
 
   useEffect(() => {
-    let productsToShow = [];
-    if (categoryName) {
-      productsToShow = products.filter(
-        product => product.categoryName === categoryName
-      );
-    } else {
-      productsToShow = products;
-    }
-    customFetch(1000, productsToShow)
-      .then(prods => setData(prods))
-      .catch(err => console.log(err));
+    showAlert(swalConfig.loader);
+    getProducts(categoryName)
+      .then(products => {
+        setData(products);
+        closeAlert();
+      })
+      .catch(err => {
+        showAlert(swalConfig.error);
+        console.error('There was an error!', err);
+      });
   }, [categoryName]);
 
   return (

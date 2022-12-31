@@ -2,10 +2,10 @@ import './Item.css';
 import GenericButton from '../GenericButton/GenericButton';
 import { Link } from 'react-router-dom';
 
-const Item = ({ pictUrl, id, name, stock, price, categoryName }) => {
+const Item = ({ pictUrl, id, name, price, categoryName }) => {
   return (
     <div className='col'>
-      <div className='card rounded-0 border-0'>
+      <div className='card rounded-0 border-0 cardItem'>
         <div>
           <div className='position-relative '>
             <div className='d-flex justify-content-center align-items-center position-absolute cardFilter'>

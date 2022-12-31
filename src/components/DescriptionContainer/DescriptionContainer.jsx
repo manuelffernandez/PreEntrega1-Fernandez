@@ -1,31 +1,32 @@
 import { useEffect, useState } from 'react';
-import { products } from '../../utils/products';
 import Description from '../Description/Description';
-import { customFetch } from '../../utils/customFetch';
 import { useParams } from 'react-router-dom';
+import { getProduct } from '../../services/fetchData';
+import { closeAlert, showAlert } from '../../utils/swalAlert';
+import swalConfig from '../../utils/swalConfig';
 
 const DescriptionContainer = () => {
   const [product, setProduct] = useState({});
   const { itemID } = useParams();
 
   useEffect(() => {
-    customFetch(
-      1000,
-      products.find(product => product.id === itemID)
-    )
-      .then(prod => {
-        setProduct(prod);
+    showAlert(swalConfig.loader);
+    getProduct(itemID)
+      .then(productGeted => {
+        setProduct(productGeted);
+        closeAlert();
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        showAlert(swalConfig.error);
+        console.error('There was an error!', err);
+      });
   }, []);
 
   return (
     <div className='container-fluid my-4 description'>
       {Object.keys(product).length !== 0 ? (
         <Description product={product} />
-      ) : (
-        <p>Cargando...</p>
-      )}
+      ) : null}
     </div>
   );
 };

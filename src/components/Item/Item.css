@@ -1,9 +1,9 @@
-.card {
+.cardItem {
   box-shadow: 0 0 3px var(--light-yellow);
   transition: all 0.5s;
 }
 
-.card:hover {
+.cardItem:hover {
   box-shadow: 0 0 15px var(--peach-puff);
   transform: scale(1.02);
 }
