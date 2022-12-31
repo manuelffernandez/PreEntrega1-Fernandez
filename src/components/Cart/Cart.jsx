@@ -6,6 +6,8 @@ import CartTable from '../CartTable/CartTable';
 import { Link } from 'react-router-dom';
 import { serverTimestamp } from 'firebase/firestore';
 import { postOrder, updateDb } from '../../services/order';
+import { showAlert } from '../../utils/swalAlert';
+import swalConfig from '../../utils/swalConfig';
 
 const Cart = () => {
   const { cartList, clear, calcSubtotal, calcTaxes, calcTotal } =
@@ -28,14 +30,16 @@ const Cart = () => {
       total: calcTotal(),
     };
 
+    showAlert(swalConfig.loader);
     postOrder(order)
-      .then(result => {
+      .then(() => {
         updateDb(cartList)
           .then(() => {
-            alert('Poner modal' + result);
             clear();
+            showAlert(swalConfig.paySuccess);
           })
           .catch(err => {
+            showAlert(swalConfig.error);
             console.log(err);
           });
       })

@@ -4,6 +4,8 @@ import DescriptionInfo from '../DescriptionInfo/DescriptionInfo';
 import GenericButton from '../GenericButton/GenericButton';
 import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../CartContext/CartContext';
+import { showAlert } from '../../utils/swalAlert';
+import swalConfig from '../../utils/swalConfig';
 
 const Description = props => {
   const { product } = props;
@@ -12,9 +14,9 @@ const Description = props => {
   const { addItem } = useContext(CartContext);
 
   const onAdd = amount => {
-    alert(`Agregaste ${amount} ${product.name} a tu carrito`);
     setAddedAmount(amount);
     addItem(product, amount);
+    showAlert(swalConfig.addedItem);
   };
 
   return (
