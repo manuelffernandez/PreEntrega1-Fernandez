@@ -5,6 +5,7 @@ const loader = {
             <div></div>
           </div>
         </div>`,
+  showConfirmButton: false,
 };
 
 const addedItem = {
