@@ -4,6 +4,9 @@ Project made for coderhouse React course. It's a an ecommerce app with a short-f
 
 I use `npx install vite@latest` as a template.
 
+## Demo
+#### I invite you to check the demo [:arrow_right: here :arrow_left:](https://jompa-spacommerce.netlify.app/)
+
 ## Screenshots :iphone:
 #### landing page
 <img src="./src/assets/readme1.jpg" />
@@ -15,28 +18,22 @@ I use `npx install vite@latest` as a template.
 <img src="./src/assets/readme3.jpg" />
 
 ## Tech Stack :man_technologist:
-### Technologies
+### Techs
 #### client
 - [React](https://reactjs.org/)
 
-#### server
+#### database
 - [Firebase/Firestore](https://firebase.google.com/)
-
-#### global state
-- [context](https://reactjs.org/docs/context.html)
 
 #### CSS framework
 - [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
-### Installed packages
-- [sweetalert2](https://sweetalert2.github.io/)
+### Aditionals
+- [context](https://reactjs.org/docs/context.html) to handle the cart state.
+- [sweetalert2](https://sweetalert2.github.io/) to display loaders.
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) to improve the users navigation.
 
-- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
-
-- [eslint](https://eslint.org/)
-
-- [prettier](https://prettier.io/)
-## Demo GIF :computer_mouse:
+## GIF :computer_mouse:
 
 <img src="./src/assets/videoMuestra.gif" />
 
@@ -49,3 +46,4 @@ I use `npx install vite@latest` as a template.
 -  Use `npm run lint` to lint with ESLint
 ## Contact me :email:
 #### manufer6503@gmail.com
+#### https://www.linkedin.com/in/manuelffernandez/
